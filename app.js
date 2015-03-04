@@ -10,6 +10,6 @@ server.listen(80);
 console.log("Server running at http://127.0.0.1:80/");
 
 setTimeout(function() {
-        throw new Error('Test Github Deploy Fix');
+//        throw new Error('Test Github Deploy Fix');
 }, 5000)
 
