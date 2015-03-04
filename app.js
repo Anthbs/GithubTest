@@ -11,6 +11,6 @@ console.log("Server running at http://127.0.0.1:80/");
 
 setTimeout(function() {
   console.log("Test");
-        throw new Error('12345');
+        //throw new Error('12345');
 }, 5000)
 
