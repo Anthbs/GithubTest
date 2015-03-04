@@ -54,8 +54,8 @@
       host : "127.0.0.1",
       ref  : "origin/master",
       repo : "https://github.com/Anthbs/GithubTest.git",
-      path : "/var/www/production",
-      "post-deploy" : "npm install && pm2 startOrRestart ecosystem.json5 --env production"
+      path : "/home/administrator/NodeApps/Githubtest/",
+      "post-deploy" : "npm install && pm2 startOrRestart GithubTest  --env production"
     }
   }
 	
