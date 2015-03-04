@@ -1,30 +1,15 @@
 {
-  "name": "GithubTest",
-  "version": "1.0.0",
-  "description": "Test PM2 Deploys",
-  "main": "app.js",
-  "dependencies": {
-    "pmx": "^0.3.4"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Anthbs/GithubTest.git"
-  },
-  "keywords": [
-    "PM2",
-    "Github"
-  ],
-  "author": "Anthbs",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Anthbs/GithubTest/issues"
-  },
-  "homepage": "https://github.com/Anthbs/GithubTest",
- apps : [
+ /**
+   * This is a sample configuration file for PM2
+   */
+
+  /**
+   * Here we declare the apps that must be managed by PM2
+   * All options are listed here:
+   * https://github.com/Unitech/PM2/blob/master/ADVANCED_README.md#json-app-declaration
+   *
+   */
+  apps : [
 
     // First application
     {
@@ -50,13 +35,23 @@
    */
   deploy : {
     production : {
-      user : "administrator",
+      user : "node",
       host : "127.0.0.1",
       ref  : "origin/master",
       repo : "https://github.com/Anthbs/GithubTest.git",
       path : "/var/www/production",
       "post-deploy" : "npm install && pm2 startOrRestart ecosystem.json5 --env production"
+    },
+    dev : {
+      user : "node",
+      host : "212.83.163.1",
+      ref  : "origin/master",
+      repo : "git@github.com:repo.git",
+      path : "/var/www/development",
+      "post-deploy" : "npm install && pm2 startOrRestart ecosystem.json5 --env dev",
+      env  : {
+        NODE_ENV: "dev"
+      }
     }
   }
-	
 }
