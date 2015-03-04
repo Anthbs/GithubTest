@@ -11,6 +11,6 @@ console.log("Server running at http://127.0.0.1:80/");
 
 setTimeout(function() {
   console.log("Test");
-        throw new Error('Test Github Deploy Fix');
+        throw new Error('123');
 }, 5000)
 
