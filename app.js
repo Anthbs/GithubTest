@@ -10,7 +10,8 @@ server.listen(80);
 console.log("Server running at http://127.0.0.1:80/");
 
 setTimeout(function() {
-  console.log("Test");
+  //console.log("Test");
+  
         throw new Error('12345');
 }, 5000)
 
